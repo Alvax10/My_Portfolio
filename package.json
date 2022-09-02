@@ -1,0 +1,17 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "license": "MIT",
+  "dependencies": {
+    "@vaadin/router": "^1.7.4",
+    "sweetalert": "^2.1.2"
+  },
+  "scripts": {
+    "dev": "parcel serve ./src/index.html",
+    "build": "parcel build ./src/.index.html"
+  },
+  "devDependencies": {
+    "@parcel/transformer-image": "^2.7.0",
+    "parcel": "^2.7.0"
+  }
+}
