@@ -2,13 +2,15 @@ import "./components/my-tecnologies";
 import "./components/my-experience";
 import "./components/my-projects";
 import "./components/contact-me";
-import "./components/header";
+import { state } from "./state";
 import "./components/footer";
+import "./components/header";
 import "./pages/home-page";
 import "./router.js";
+import "./state";
 
 function main() {
-    // console.log("Hola mundo!");
+    state.init();
 }
 
 main();

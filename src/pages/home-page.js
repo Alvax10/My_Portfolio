@@ -1,4 +1,6 @@
-// import { Router } from "@vaadin/router";
+const googleDocsIcon = require("url:../assets/doc-icon.png");
+const pdfIcon = require("url:../assets/pdf-icon.webp");
+const pdfFile = require("url:../assets/cv.pdf");
 
 class HomePage extends HTMLElement {
 
@@ -41,6 +43,31 @@ class HomePage extends HTMLElement {
                 border-radius: 50%;
                 box-shadow: 2px 4px 2px goldenrod;
             }
+
+            .title {
+                margin-top: 50px;
+                text-align: center;
+                text-decoration: overline underline goldenrod;
+            }
+
+            .my-cv {
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+            }
+
+            .cv-container {
+                gap: 50px;
+                display: flex;
+                justify-self: center;
+                flex-direction: column;
+                justify-content: center;
+            }
+
+            .icon-img {
+                width: 70px;
+                height: 70px;
+            }
             
             .each-tecnology {
 
@@ -78,6 +105,18 @@ class HomePage extends HTMLElement {
                     align-items: start;
                     flex-direction: column;
                 }
+
+                .cv-container {
+                    gap: 100px;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                }
+
+                .icon-img {
+                    width: 100px;
+                    height: 100px;
+                }
             }
         `;
 
@@ -92,6 +131,19 @@ class HomePage extends HTMLElement {
                 </div>
 
                 <img class="profile-picture" src="https://media-exp1.licdn.com/dms/image/C5603AQEIwu3Tsrpskw/profile-displayphoto-shrink_200_200/0/1641903363331?e=1667433600&v=beta&t=L3bcbp-riNDiRM_3ONRu9btSe9mA4_n5y_PwmHc0KrY" alt="my-picture" />
+            </section>
+
+            <section class="my-cv">
+                <h2 class="title"> Checkout my CV! </h2>
+                <div class="cv-container">
+                    <a class="text-pdf" href="${pdfFile}" download>
+                        <img class="icon-img" src="${pdfIcon}" alt="pdf-icon">
+                    </a>
+
+                    <a class="text-pdf" href="https://docs.google.com/document/d/1qnU3J5bMPn9icLISckA5svl2fYslnay7BBsnMz1eFl8/edit?usp=sharing">
+                        <img class="icon-img" src="${googleDocsIcon}" alt="google-docs-icon" />
+                    </a>
+                </div>
             </section>
 
             <!-- MAIN BODY -->

@@ -1,3 +1,4 @@
+import { state } from "../state";
 import swal from "sweetalert";
 
 class ContactMeComp extends HTMLElement {
@@ -122,13 +123,16 @@ class ContactMeComp extends HTMLElement {
             e.preventDefault();
             const target = e.target;
 
-            console.log({
+            const data = {
                 name: target["name"].value,
                 email: target["email"].value,
                 description: target["description"].value
+            };
+
+            state.getDataFromForm(data, () => {
+                swal({ title: "Alright!", text: "Email succesfully sent :D", icon: "success" });
             });
 
-            swal({ title: "Alright!", text: "Email succesfully sent :D", icon: "success" });
         });
     }
 }
